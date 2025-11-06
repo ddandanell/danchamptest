@@ -18,10 +18,11 @@ const itemVariants = {
 export const BenefitsList: React.FC<BenefitsListProps> = ({ benefits, language }) => {
   return (
     <div className="space-y-3 sm:space-y-4">
-      <h3 className="text-lg sm:text-xl font-bold text-navy-dark mb-3 sm:mb-4">
-        {language === 'da' ? 'Fordele' : 'Benefits'}
+      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-navy-dark mb-3 sm:mb-4 flex items-center gap-2">
+        <span className="text-2xl sm:text-3xl">✨</span>
+        <span>{language === 'da' ? 'Fordele' : 'Benefits'}</span>
       </h3>
-      <ul className="space-y-2 sm:space-y-3">
+      <ul className="space-y-1.5 sm:space-y-2">
         {benefits.map((benefit, index) => (
           <motion.li
             key={index}
@@ -29,10 +30,10 @@ export const BenefitsList: React.FC<BenefitsListProps> = ({ benefits, language }
             initial="hidden"
             animate="visible"
             transition={{ delay: index * 0.1 }}
-            className="flex items-start gap-2 sm:gap-3"
+            className="flex items-start gap-2 sm:gap-3 p-2 sm:p-3 rounded-lg bg-gradient-to-r from-[#f8f9fa] to-white hover:from-[#c41e3a]/5 hover:to-[#f8f9fa] transition-all duration-300"
           >
-            <span className="text-danish-red text-base sm:text-lg mt-0.5 sm:mt-1 flex-shrink-0">✓</span>
-            <span className="text-navy-dark text-sm sm:text-base leading-relaxed">{benefit}</span>
+            <span className="text-xl sm:text-2xl flex-shrink-0">✅</span>
+            <span className="text-navy-dark text-xs sm:text-sm md:text-base leading-relaxed font-medium">{benefit}</span>
           </motion.li>
         ))}
       </ul>
