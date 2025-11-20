@@ -1,4 +1,4 @@
-import HeaderNew from "@/components/HeaderNew";
+import Header from "@/components/Header";
 import TopBanner from "@/components/TopBanner";
 import EnhancedHero from "@/components/EnhancedHero";
 import TrustBadges from "@/components/TrustBadges";
@@ -31,7 +31,7 @@ export default function Home() {
       />
       
       {/* Header */}
-      <HeaderNew />
+      <Header />
       
       <main>
         {/* Enhanced Hero Section */}
@@ -65,25 +65,6 @@ export default function Home() {
       {/* Floating Elements */}
       <FloatingWhatsApp />
       <FloatingWhatsAppDesktop />
-    </div>
-  );
-}
-        <HealthBenefits />
-        <About />
-        <BookingProcess />
-        <WhatToExpect />
-        <SafetyHygiene />
-        <Therapists />
-        <Testimonials />
-        <Pricing />
-        <ServiceAreas />
-        <FAQ />
-        <Contact />
-        <UbudAreas />
-        <SEOContent />
-      </main>
-      <Footer />
-      <WhatsAppFloat />
     </div>
   );
 }
